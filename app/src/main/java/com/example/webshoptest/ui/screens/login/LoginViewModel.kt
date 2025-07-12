@@ -69,7 +69,7 @@ class LoginViewModel @Inject constructor(
         _uiState.update { it.copy(errorMessage = message, isLoading = false) }
 
         viewModelScope.launch {
-            delay(6000)
+            delay(5000)
             _uiState.update { it.copy(errorMessage = null) }
         }
     }

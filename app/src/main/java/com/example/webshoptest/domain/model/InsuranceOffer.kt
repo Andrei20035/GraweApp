@@ -2,7 +2,7 @@ package com.example.webshoptest.domain.model
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Insurance(
+data class InsuranceOffer(
     val productVariant: Int,
     val amountInsured: Int,
     val premiumEur: Double,

@@ -1,7 +1,7 @@
 package com.example.webshoptest.data.remote.api
 
 import com.example.webshoptest.data.remote.dto.DataRequest
-import com.example.webshoptest.data.remote.dto.DataResponse
+import com.example.webshoptest.domain.model.InsuranceOffer
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -13,5 +13,5 @@ interface DataApi {
     suspend fun getData(
         @Header("Authorization") token: String,
         @Body request: DataRequest
-    ): Response<DataResponse>
+    ): Response<List<InsuranceOffer>>
 }

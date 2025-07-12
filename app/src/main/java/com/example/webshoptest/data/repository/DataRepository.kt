@@ -2,7 +2,7 @@ package com.example.webshoptest.data.repository
 
 import com.example.webshoptest.data.remote.api.DataApi
 import com.example.webshoptest.data.remote.dto.DataRequest
-import com.example.webshoptest.data.remote.dto.DataResponse
+import com.example.webshoptest.domain.model.InsuranceOffer
 import com.example.webshoptest.domain.repository.IDataRepository
 import com.example.webshoptest.utils.ApiResult
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -13,7 +13,7 @@ import javax.inject.Singleton
 class DataRepository @Inject constructor(
     private val dataApi: DataApi
 ): IDataRepository, BaseRepository() {
-    override suspend fun getData(token: String, request: DataRequest): ApiResult<DataResponse> {
+    override suspend fun getData(token: String, request: DataRequest): ApiResult<List<InsuranceOffer>> {
        return safeApiCall { dataApi.getData(token, request) }
     }
 }
