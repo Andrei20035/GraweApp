@@ -95,7 +95,7 @@ fun InsuranceOfferCard(offer: InsuranceOffer) {
 
             Spacer(modifier = Modifier.height(4.dp))
             Text(
-                text = "Insured Amount: €${offer.amountInsured}",
+                text = "Insured amount: €${offer.amountInsured}",
                 color = Color.Black
             )
             Text(
@@ -105,17 +105,17 @@ fun InsuranceOfferCard(offer: InsuranceOffer) {
 
             if (offer.cancelTrip) {
                 Text(
-                    text = "Cancellation Included",
+                    text = "Cancellation included",
                     color = Color(0xFF2E7D32),
                     fontWeight = FontWeight.SemiBold
                 )
                 Text(
-                    text = "Cancellation Premium: €${offer.cancellationPremiumEur} | ${offer.cancellationPremiumRsd} RSD",
+                    text = "Cancellation premium: €${offer.cancellationPremiumEur} | ${offer.cancellationPremiumRsd} RSD",
                     color = Color.Black
                 )
             } else {
                 Text(
-                    text = "No Trip Cancellation",
+                    text = "No trip cancellation",
                     color = Color(0xFFB71C1C),
                     fontWeight = FontWeight.SemiBold
                 )
@@ -123,11 +123,11 @@ fun InsuranceOfferCard(offer: InsuranceOffer) {
 
             if (offer.pandemicProtectionIncluded) {
                 Text(
-                    text = "Pandemic Protection: ✅",
+                    text = "Pandemic protection: ✅",
                     color = Color.Black)
             } else {
                 Text(
-                    text = "Pandemic Protection: ❌",
+                    text = "Pandemic protection: ❌",
                     color = Color.Black)
             }
         }
